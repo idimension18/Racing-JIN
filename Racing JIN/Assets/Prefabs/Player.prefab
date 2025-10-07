@@ -244,6 +244,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5b75eab1-327f-4574-8ecc-a192871aab44
     m_ActionName: 'Player/Turn[/HORIFightingCommander/Stick/x]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4939615832502017991}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnBreak
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5cb46a37-eb59-4142-ac22-3a1838a10378
+    m_ActionName: 'Player/Break[/HORIFightingCommander/Z]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
@@ -288,8 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e58006708a9fdf18c43df2b752851e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  maxAccelerationValue: 3
-  maxRotationSpeed: 180
 --- !u!114 &1573112436481326162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,5 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7c32f7a15f9301d99edde637cff48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyCarPhysics
-  accelerationFactor: 4
-  rotationSpeedFactor: 180
+  maxSpeed: 8
+  maxBackwardSpeed: 5
+  accelerationFactor: 1
+  rotationSpeedFactor: 5
+  driftFactor: 0.1

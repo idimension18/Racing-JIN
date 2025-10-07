@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MyCarPhysics : MonoBehaviour
@@ -50,7 +51,15 @@ public class MyCarPhysics : MonoBehaviour
 
     void ApplySteering()
     {
-        if (_rb.linearVelocity.magnitude >= 1) _angle -= _rotationInput * rotationSpeedFactor;
+        Vector2 velocity2d = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.z);
+        Vector2 forward2d = new Vector2(transform.forward.x, transform.forward.z);
+        Vector2 forwardVelocity = forward2d * Vector2.Dot(velocity2d, forward2d);
+        
+        float direction = Vector2.Dot(forward2d, forwardVelocity);
+        
+        float sign = Math.Sign(direction);
+        
+        if (_rb.linearVelocity.magnitude >= 1) _angle -= _rotationInput * (sign) * rotationSpeedFactor;
         
         Quaternion rotation = Quaternion.AngleAxis(_angle, Vector3.up);
         _rb.MoveRotation(rotation);
