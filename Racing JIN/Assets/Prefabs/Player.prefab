@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 5491184771317410086}
   - component: {fileID: 5140550717229020795}
   - component: {fileID: 4939615832502017991}
+  - component: {fileID: 1573112436481326162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -173,8 +174,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 4939615832502017991}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnAccelerate
         m_Mode: 0
         m_Arguments:
@@ -229,8 +230,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 4939615832502017991}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnStick
         m_Mode: 0
         m_Arguments:
@@ -273,7 +274,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 10
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &4939615832502017991
 MonoBehaviour:
@@ -287,5 +288,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e58006708a9fdf18c43df2b752851e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  maxAccelerationValue: 0
-  maxRotationSpeed: 0
+  maxAccelerationValue: 3
+  maxRotationSpeed: 180
+--- !u!114 &1573112436481326162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020227121802969537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7c32f7a15f9301d99edde637cff48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyCarPhysics
+  accelerationFactor: 4
+  rotationSpeedFactor: 180

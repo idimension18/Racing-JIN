@@ -1,19 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float maxAccelerationValue;
-    [SerializeField] private float maxRotationSpeed;
-    
-    private bool _isAccelerating;
-    private float _stickX;
-    
+    private MyCarPhysics _carPhysics;
     private Rigidbody _rigidbody;
 
     void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _carPhysics = GetComponent<MyCarPhysics>();
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,28 +20,36 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (_isAccelerating) _rigidbody.AddForce(transform.forward * maxAccelerationValue);
-        if (_isAccelerating) transform.Translate(maxAccelerationValue * Time.deltaTime * Vector3.forward);
-        
-        transform.Rotate(transform.up, _stickX * maxRotationSpeed * Time.deltaTime);
-        
+    }
+
+    public void OnBreak(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _carPhysics.SetAccelerationValue(-0.5f);
+        }
+
+        if (context.canceled)
+        {
+            _carPhysics.SetAccelerationValue(0);
+        }
     }
 
     public void OnAccelerate(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            _isAccelerating = true;
+            _carPhysics.SetAccelerationValue(1);
         }
 
         if (context.canceled)
         {
-            _isAccelerating = false;
+            _carPhysics.SetAccelerationValue(0);
         }
     }
     
     public void OnStick(InputAction.CallbackContext context)
     {
-        _stickX = context.ReadValue<float>();
+        _carPhysics.SetRotationValue(-context.ReadValue<float>());
     }
 }
