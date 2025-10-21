@@ -59,11 +59,22 @@
                 },
                 {
                     "name": "",
-                    "id": "c4a6177f-b34e-41dc-b957-d5d18c641877",
-                    "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Stick/x",
+                    "id": "e88a8e2b-2043-4075-b80b-a35f9d1a345d",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad;Joystick",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51dacb07-ecf6-452b-a6f5-21c029a71ab1",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick;Gamepad",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -118,7 +129,18 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2dc44d59-705a-49a1-af09-a068606a997d",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick;Gamepad",
                     "action": "Break",
                     "isComposite": false,
                     "isPartOfComposite": false
