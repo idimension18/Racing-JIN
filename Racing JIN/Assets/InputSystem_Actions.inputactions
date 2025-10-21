@@ -48,6 +48,17 @@
                 },
                 {
                     "name": "",
+                    "id": "044895e1-9cd7-48d1-8330-fcdec431c03c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c4a6177f-b34e-41dc-b957-d5d18c641877",
                     "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Stick/x",
                     "interactions": "",
@@ -58,12 +69,56 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "30737c32-271d-48b2-8bf0-c60554375c6f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "762be0b4-cccc-4895-9d25-d9318eca9e39",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1a3aed71-9677-47c8-89d9-c73ceef1e962",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "efd747c7-a072-47bf-9a9b-37b912cefc43",
                     "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Z",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Joystick",
+                    "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a81b3d0-6f38-4bbd-a147-7bba975a7b41",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Break",
                     "isComposite": false,
                     "isPartOfComposite": false

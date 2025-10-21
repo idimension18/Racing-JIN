@@ -30,6 +30,8 @@ public class MyCarPhysics : MonoBehaviour
     void FixedUpdate()
     {
         ApplyEngineForce();
+
+        AlignToGround();
         
         KillOrthogonalVelocity();
         
@@ -59,12 +61,30 @@ public class MyCarPhysics : MonoBehaviour
         
         float sign = Math.Sign(direction);
         
-        if (_rb.linearVelocity.magnitude >= 1) _angle -= _rotationInput * (sign) * rotationSpeedFactor;
+        // update angle only if the object is moving 
+        if (_rb.linearVelocity.magnitude >= 1) 
+            _angle -= _rotationInput * sign * rotationSpeedFactor;
+        else if (_rb.linearVelocity.magnitude >= 0.6)
+            _angle -= _rotationInput * sign * rotationSpeedFactor * _rb.linearVelocity.magnitude;
+  
         
         Quaternion rotation = Quaternion.AngleAxis(_angle, Vector3.up);
         _rb.MoveRotation(rotation);
     }
 
+    void AlignToGround()
+    {
+        // Get the ground 
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 0.5f))
+        {
+            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+            _rb.MoveRotation(targetRotation);
+        }
+    }
+    
     void KillOrthogonalVelocity()
     {
         float upVelocity = _rb.linearVelocity.y;
