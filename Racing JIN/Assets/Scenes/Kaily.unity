@@ -672,9 +672,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573112436481326162, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573112436481326162, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: driftFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573112436481326162, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: noDriftFactor
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573112436481326162, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: accelerationFactor
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824590557961973811, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824590557961973811, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140550717229020795, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140550717229020795, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_LinearDamping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706544125288577262, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706544125288577262, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.118
+      objectReference: {fileID: 0}
     - target: {fileID: 7020227121802969537, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885473978827441322, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_Mass
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885473978827441322, guid: dfb260aa0ffd5348a8763fea2ef875fd, type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

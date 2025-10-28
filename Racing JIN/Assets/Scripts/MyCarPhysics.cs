@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 public class MyCarPhysics : MonoBehaviour
@@ -7,11 +8,14 @@ public class MyCarPhysics : MonoBehaviour
     [SerializeField] private float maxBackwardSpeed;
     [SerializeField] private float accelerationFactor;
     [SerializeField] private float rotationSpeedFactor;
+    [SerializeField] private float noDriftFactor;
     [SerializeField] private float driftFactor;
     
     private float _accelerationInput;
     private float _rotationInput;
     private float _angle;
+    private bool _isDrifting;
+    private float _currentDriftFactor;
 
     private Rigidbody _rb;
 
@@ -23,7 +27,6 @@ public class MyCarPhysics : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -109,5 +112,12 @@ public class MyCarPhysics : MonoBehaviour
     public void SetRotationValue(float rotationInput)
     {
         _rotationInput = rotationInput;
+    }
+
+    public void SetIsDrifting(bool isDrifting)
+    {
+        _isDrifting =  isDrifting;
+        
+        _currentDriftFactor = _isDrifting ? driftFactor : noDriftFactor;
     }
 }

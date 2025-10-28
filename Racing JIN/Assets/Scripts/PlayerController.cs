@@ -52,4 +52,22 @@ public class PlayerController : MonoBehaviour
     {
         _carPhysics.SetRotationValue(-context.ReadValue<float>());
     }
+
+    public void OnBoost(InputAction.CallbackContext context)
+    {
+        
+    }
+
+    public void OnDrift(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _carPhysics.SetIsDrifting(true);
+        }
+
+        if (context.canceled)
+        {
+            _carPhysics.SetIsDrifting(false);
+        }
+    }
 }
