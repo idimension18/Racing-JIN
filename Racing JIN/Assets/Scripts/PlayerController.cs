@@ -10,17 +10,6 @@ public class PlayerController : MonoBehaviour
     {
         _carPhysics = GetComponent<MyCarPhysics>();
     }
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     public void OnBreak(InputAction.CallbackContext context)
     {
@@ -51,5 +40,23 @@ public class PlayerController : MonoBehaviour
     public void OnStick(InputAction.CallbackContext context)
     {
         _carPhysics.SetRotationValue(-context.ReadValue<float>());
+    }
+
+    public void OnBoost(InputAction.CallbackContext context)
+    {
+        
+    }
+
+    public void OnDrift(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _carPhysics.SetIsDrifting(true);
+        }
+
+        if (context.canceled)
+        {
+            _carPhysics.SetIsDrifting(false);
+        }
     }
 }

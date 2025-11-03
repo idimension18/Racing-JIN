@@ -137,7 +137,7 @@ WheelCollider:
     targetPosition: 0
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 50
+  m_Mass: 30
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -188,8 +188,8 @@ Transform:
   m_GameObject: {fileID: 5933322626688206731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0.118, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1301539888371382597}
@@ -377,7 +377,7 @@ WheelCollider:
     targetPosition: 0
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 10
+  m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -552,6 +552,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5cb46a37-eb59-4142-ac22-3a1838a10378
     m_ActionName: 'Player/Break[/HORIFightingCommander/Z]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4939615832502017991}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDrift
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 48232259-e0b3-471d-a5fe-4c1e94abfd1f
+    m_ActionName: 'Player/Drift[/Keyboard/g]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
@@ -565,8 +581,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7020227121802969537}
   serializedVersion: 5
-  m_Mass: 100
-  m_LinearDamping: 0
+  m_Mass: 50
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -608,8 +624,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7c32f7a15f9301d99edde637cff48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyCarPhysics
-  maxSpeed: 10
+  maxSpeed: 6
   maxBackwardSpeed: 2
-  accelerationFactor: 1
+  accelerationFactor: 0.8
   rotationSpeedFactor: 5
-  driftFactor: 0.1
+  noDriftFactor: 0.1
+  driftFactor: 1
+  driftBreakFactor: 0.4
+  boostTime: 1
+  boostAccelerationFactor: 1
+  boostMaxSpeed: 10
+  grassFactor: 1
+  grassMaxSpeed: 3
