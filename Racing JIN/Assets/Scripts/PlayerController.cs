@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnBreak(InputAction.CallbackContext context)
     {
+        if (_carPhysics == null) return;
+        
         if (context.started)
         {
             _carPhysics.SetAccelerationValue(-0.5f);
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnAccelerate(InputAction.CallbackContext context)
     {
+        if (_carPhysics == null) return;
+        
         if (context.started)
         {
             _carPhysics.SetAccelerationValue(1);
@@ -39,6 +43,8 @@ public class PlayerController : MonoBehaviour
     
     public void OnStick(InputAction.CallbackContext context)
     {
+        if (_carPhysics == null) return;
+        
         _carPhysics.SetRotationValue(-context.ReadValue<float>());
     }
 
@@ -49,6 +55,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnDrift(InputAction.CallbackContext context)
     {
+        if (_carPhysics == null) return;
+        
         if (context.started)
         {
             _carPhysics.SetIsDrifting(true);
