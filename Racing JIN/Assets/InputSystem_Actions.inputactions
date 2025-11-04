@@ -123,6 +123,17 @@
                 },
                 {
                     "name": "",
+                    "id": "8e6caf01-79ce-416f-8076-3e89cd72afaf",
+                    "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Stick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "efd747c7-a072-47bf-9a9b-37b912cefc43",
                     "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Z",
                     "interactions": "",
@@ -157,10 +168,10 @@
                 {
                     "name": "",
                     "id": "9a0a47c6-912d-43c7-a4d7-c99d2419aaa9",
-                    "path": "<Linux::HoriCoLtd::HORIFightingCommander>/Start",
+                    "path": "<Linux::HoriCoLtd::HORIFightingCommander>/ThumbLeft",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": ";Joystick",
                     "action": "Drift",
                     "isComposite": false,
                     "isPartOfComposite": false
