@@ -30,6 +30,7 @@ public class MyCarPhysics : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _angle = transform.rotation.eulerAngles.y;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class MyCarPhysics : MonoBehaviour
         ApplyBoostForce();
         
         ApplyEngineForce();
-
+        
         AlignToGround();
         
         KillOrthogonalVelocity();
@@ -72,16 +73,13 @@ public class MyCarPhysics : MonoBehaviour
         float direction = Math.Sign(Vector2.Dot(forward2d, forwardVelocity));
         
         // update angle only if the object is moving 
-        
         if (_rb.linearVelocity.magnitude >= 1) 
             _angle -= _rotationInput * direction * rotationSpeedFactor;
         
         else if (_rb.linearVelocity.magnitude >= 0.6) 
             _angle -= _rotationInput * direction * rotationSpeedFactor * _rb.linearVelocity.magnitude;
-  
         
-        Quaternion rotation = Quaternion.AngleAxis(_angle, Vector3.up);
-        _rb.MoveRotation(rotation);
+        _rb.MoveRotation(Quaternion.AngleAxis(_angle, Vector3.up));
     }
 
     
