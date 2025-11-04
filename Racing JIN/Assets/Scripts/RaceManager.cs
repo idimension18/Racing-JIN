@@ -9,6 +9,7 @@ public class RaceManager : MonoBehaviour
     [Header("Race Settings")]
     [SerializeField] private int totalLaps = 3;
     [SerializeField] private CheckpointManager checkpointManager;
+    [SerializeField] private bool useCountdown = true;
     
     [Header("UI References")]
     [SerializeField] private RaceUI raceUI;
@@ -40,8 +41,11 @@ public class RaceManager : MonoBehaviour
             finishScreenUI.SetActive(false);
         }
         
-        // Démarrer la course après un court délai
-        Invoke(nameof(StartRace), 1f);
+        // Ne démarrer la course automatiquement que si pas de countdown
+        if (!useCountdown)
+        {
+            Invoke(nameof(StartRace), 1f);
+        }
     }
     
     void Update()
