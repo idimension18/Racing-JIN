@@ -26,11 +26,15 @@ public class MyCarPhysics : MonoBehaviour
     private bool _isOnGrass;
 
     private Rigidbody _rb;
+    private SpeedVisualEffects _visualEffects;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _angle = transform.rotation.eulerAngles.y;
+        
+        // Récupérer le composant d'effets visuels s'il existe
+        _visualEffects = GetComponent<SpeedVisualEffects>();
     }
 
     // Update is called once per frame
@@ -150,6 +154,12 @@ public class MyCarPhysics : MonoBehaviour
         else
         {
             _isBoost = false;
+            
+            // Arrêter l'effet visuel du boost
+            if (_visualEffects != null)
+            {
+                _visualEffects.StopBoostEffect();
+            }
         }
     }
 
@@ -190,6 +200,12 @@ public class MyCarPhysics : MonoBehaviour
     {
         _isBoost = true;
         _boostTimer = boostTime;
+        
+        // Déclencher l'effet visuel du boost
+        if (_visualEffects != null)
+        {
+            _visualEffects.TriggerBoostEffect();
+        }
     }
 
     public void SetOnGrass(bool isOnGrass)
