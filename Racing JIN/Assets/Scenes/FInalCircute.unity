@@ -6306,6 +6306,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41638505446045533, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 41638505446045533, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 41638505446045533, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 41638505446045533, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 121370556281362450, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121370556281362450, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121370556281362450, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121370556281362450, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
     - target: {fileID: 966829552997597917, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6386,6 +6418,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2034937448989529441, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.08810955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034937448989529441, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.08810955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034937448989529441, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034937448989529441, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279637721
+      objectReference: {fileID: 0}
     - target: {fileID: 2191667278936104090, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
       propertyPath: lowBeep
       value: 
@@ -6413,6 +6461,22 @@ PrefabInstance:
     - target: {fileID: 3258390262381015530, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
       propertyPath: m_Name
       value: RaceUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616008258698688399, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616008258698688399, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616008258698688399, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616008258698688399, guid: 9f429a5dd4a8a9140b49cc3991ced873, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6470,6 +6534,14 @@ PrefabInstance:
     - target: {fileID: 2943397677051649385, guid: 74f14798937d9507691b5c8699bce8c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458337736324401830, guid: 74f14798937d9507691b5c8699bce8c2, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1221489
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458337736324401830, guid: 74f14798937d9507691b5c8699bce8c2, type: 3}
+      propertyPath: m_Center.x
+      value: 0.5277768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7091,9 +7163,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45298314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.27095598
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Size.z
+      value: 1.0830431
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Center.x
+      value: -0.27350843
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.13547799
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_Center.z
+      value: -0.48262358
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300347042940601655, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7951446629927331854, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
       propertyPath: m_Name
       value: Circut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257981811169893898, guid: 3b535b0843226d34599951b431f83dd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
