@@ -15,6 +15,11 @@ public class RaceManager : MonoBehaviour
     [SerializeField] private RaceUI raceUI;
     [SerializeField] private GameObject finishScreenUI;
     
+    [Header("SFX and Soundtrack")]
+    [SerializeField] private AudioSource validationSFX;
+    [SerializeField] private AudioSource soundtrack;
+    [SerializeField] private AudioSource ending;
+    
     private Dictionary<GameObject, int> playerLaps = new Dictionary<GameObject, int>();
     private Dictionary<GameObject, float> playerTimes = new Dictionary<GameObject, float>();
     private Dictionary<GameObject, float> playerBestLapTimes = new Dictionary<GameObject, float>();
@@ -116,6 +121,9 @@ public class RaceManager : MonoBehaviour
             return;
         }
         
+        // Le tour est validé 
+        validationSFX.Play();
+        
         int currentLap = playerLaps[player];
         
         // Calculer le temps du tour
@@ -160,6 +168,9 @@ public class RaceManager : MonoBehaviour
     /// </summary>
     private void FinishRace(GameObject player)
     {
+        soundtrack.Stop();
+        ending.Play();
+        
         raceFinished = true;
         float totalTime = Time.time - raceStartTime;
         playerTimes[player] = totalTime;

@@ -21,6 +21,11 @@ public class CountdownManager : MonoBehaviour
     [SerializeField] private Color goColor = Color.green;
     [SerializeField] private float scaleAnimationMax = 1.5f;
     [SerializeField] private float fadeSpeed = 2f;
+
+    [Header("SFX and Soundtrack")] 
+    [SerializeField] private AudioSource lowBeep;
+    [SerializeField] private AudioSource highBeep;
+    [SerializeField] private AudioSource soundtrack;
     
     [Header("References")]
     [SerializeField] private RaceManager raceManager;
@@ -125,16 +130,19 @@ public class CountdownManager : MonoBehaviour
         // Compte à rebours : 3... 2... 1...
         for (int i = countdownTime; i > 0; i--)
         {
+            lowBeep.Play();
             ShowNumber(i, countdownColor);
             yield return new WaitForSeconds(numberDisplayDuration);
         }
         
         // Afficher "GO!" ET démarrer la course en même temps
+        highBeep.Play();
         ShowNumber(0, goColor);
         
         // DÉMARRER LA COURSE IMMÉDIATEMENT
         if (raceManager != null)
         {
+            soundtrack.Play();
             raceManager.StartRace();
         }
         
