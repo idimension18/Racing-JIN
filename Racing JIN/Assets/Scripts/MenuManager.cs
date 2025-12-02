@@ -1,3 +1,4 @@
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -10,6 +11,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Button startButton;
     [SerializeField] private Button buttonSetting;
     [SerializeField] private Button quitButton;
+    
+    [Header("Settings Buttons")]
+    [SerializeField] private Button settingsQuitButton;
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider soundtrackSlider;
+    [SerializeField] private Slider sfxSlider;
     
     [Header("Scene Settings")]
     [SerializeField] private string gameSceneName = "SampleScene";
@@ -28,6 +35,12 @@ public class MenuManager : MonoBehaviour
         ConfigureButtonColors(startButton);
         ConfigureButtonColors(buttonSetting);
         ConfigureButtonColors(quitButton);
+        
+        ConfigureButtonColors(settingsQuitButton);
+        ConfigureSliderColor(masterSlider);
+        ConfigureSliderColor(soundtrackSlider);
+        ConfigureSliderColor(sfxSlider);
+        
         
         // Sélectionner le bouton "Jouer" par défaut
         if (startButton != null)
@@ -80,6 +93,24 @@ public class MenuManager : MonoBehaviour
         // S'assurer que le mode de transition est sur Colors
         button.transition = Selectable.Transition.ColorTint;
     }
+    
+    private void ConfigureSliderColor(Slider button)
+    {
+        if (button == null) return;
+        
+        ColorBlock colors = button.colors;
+        colors.normalColor = normalColor;
+        colors.highlightedColor = highlightedColor;
+        colors.pressedColor = pressedColor;
+        colors.selectedColor = selectedColor;
+        colors.colorMultiplier = 1f;
+        colors.fadeDuration = 0.1f;
+        
+        button.colors = colors;
+        
+        // S'assurer que le mode de transition est sur Colors
+        button.transition = Selectable.Transition.ColorTint;
+    }
 
     /// <summary>
     /// Lance le jeu en chargeant la scène de jeu principale
@@ -97,6 +128,15 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Opening settings menu...");
         // TODO: Implémenter l'ouverture du menu des paramètres
+        
+        EventSystem.current.SetSelectedGameObject(settingsQuitButton.gameObject);
+    }
+    
+    public void CloseSettings()
+    {
+        Debug.Log("Opening settings menu...");
+        // TODO: Implémenter l'ouverture du menu des paramètres
+        EventSystem.current.SetSelectedGameObject(startButton.gameObject);
     }
 
     /// <summary>
